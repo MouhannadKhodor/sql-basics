@@ -36,3 +36,22 @@
    VALUES ('Layal','18', 'F','350','08/09/2018'
 
 3-DELETE FROM students WHERE Name = 'Layal'
+
+
+#Joins
+
+1- SELECT employees.Name,companies.Name, companies.Date
+	FROM companies
+	INNER JOIN employees
+
+2-  SELECT employees.Name
+	FROM companies
+	INNER JOIN employees
+	ON companies.Name = employees.Company
+	WHERE companies.Date < 2000;
+
+3-SELECT companies.Name
+	FROM companies
+	INNER JOIN employees
+	ON companies.Name = employees.Company
+	WHERE employees.Role = 'Graphic Designer';
